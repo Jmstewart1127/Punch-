@@ -1,0 +1,59 @@
+﻿@model TimeClock.Models.TimeClock
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/TimeClock/ClockIn.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TimeClock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClockInTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClockInTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClockOutTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClockOutTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPayPeriodTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPayPeriodTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

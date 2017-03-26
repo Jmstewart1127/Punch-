@@ -272,6 +272,10 @@
     <Content Include="Views\TimeClock\ClockIn.cshtml" />
     <Content Include="Views\TimeClock\Punch.cshtml" />
     <Content Include="Views\TimeClock\getCurrentTime.cshtml" />
+    <Content Include="Views\TimeClock\Create.cshtml" />
+    <Content Include="Views\TimeClock\Delete.cshtml" />
+    <Content Include="Views\TimeClock\Details.cshtml" />
+    <Content Include="Views\TimeClock\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
