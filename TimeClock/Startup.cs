@@ -1,5 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using System.Web.Services.Description;
+using TimeClock.Models;
 
 [assembly: OwinStartupAttribute(typeof(TimeClock.Startup))]
 namespace TimeClock
@@ -11,4 +13,5 @@ namespace TimeClock
             ConfigureAuth(app);
         }
     }
+
 }
