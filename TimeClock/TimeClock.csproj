@@ -287,6 +287,7 @@
     <Content Include="Views\Punch\Details.cshtml" />
     <Content Include="Views\Punch\Edit.cshtml" />
     <Content Include="Views\Punch\Index.cshtml" />
+    <Content Include="Views\Punch\ClockIn.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

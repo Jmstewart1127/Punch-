@@ -35,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.UserName, htmlAttributes: new {@class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new {@id = "test", @class = "form-control" } })
+                @Html.(model => model.UserName, new { htmlAttributes = new {@id = "test", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ClockInTime, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.Value(model => model.ClockInTime, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             <input type="button" id="clockIn" value="Clock In"  />
         </div>

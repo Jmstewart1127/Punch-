@@ -23,8 +23,24 @@ namespace TimeClock.Controllers
             return startTime;
         }
 
+        public ActionResult ClockIn()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ClockIn([Bind(Include = "ClockInTime")] Punch getCurrentTime)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Punch.Add(getCurrentTime);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
+            return View(getCurrentTime);
+        }
 
         // GET: Punch
         public ActionResult Index()
