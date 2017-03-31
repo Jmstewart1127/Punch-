@@ -1,0 +1,65 @@
+﻿@model TimeClock.Models.Punch
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/TimeClock/ClockIn.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Punch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClockInTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClockInTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClockOutTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClockOutTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPayPeriodTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPayPeriodTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
