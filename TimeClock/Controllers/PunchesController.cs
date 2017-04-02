@@ -18,14 +18,12 @@ namespace TimeClock.Models
             return DateTime.Now;
         }
 
-        public bool InsertNewReview(Punch ClockInTime)
+        public bool ClockIn(Punch ClockInTime)
         {
 
             Punch p = new Punch()
             {
-
                 ClockInTime = getTime()
-
             };
 
             db.Punch.Add(ClockInTime);
