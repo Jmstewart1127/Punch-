@@ -207,7 +207,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Punch.cs" />
-    <Compile Include="Models\PunchesController.cs" />
+    <Compile Include="Controllers\PunchesController.cs" />
     <Compile Include="Models\TimeClock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

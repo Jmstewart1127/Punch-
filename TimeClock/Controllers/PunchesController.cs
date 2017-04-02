@@ -13,6 +13,28 @@ namespace TimeClock.Models
     {
         private PunchDBContext db = new PunchDBContext();
 
+        public DateTime getTime()
+        {
+            return DateTime.Now;
+        }
+
+        public bool InsertNewReview(Punch ClockInTime)
+        {
+
+            Punch p = new Punch()
+            {
+
+                ClockInTime = getTime()
+
+            };
+
+            db.Punch.Add(ClockInTime);
+            db.SaveChanges();
+
+            return true;
+
+        }
+
         // GET: Punches
         public ActionResult Index()
         {
